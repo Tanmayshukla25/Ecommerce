@@ -1,0 +1,127 @@
+
+
+.reg-container-ecom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
+/* Card */
+.reg-card-ecom {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+}
+
+
+/* Tabs */
+.reg-tab-ecom {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.reg-tab-active {
+  color: #1f2937;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 4px;
+}
+
+.reg-tab-inactive {
+  color: #9ca3af;
+}
+
+/* Title */
+.reg-title-ecom {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Form */
+.reg-form-ecom {
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-form-ecom label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.reg-form-ecom input[type="text"],
+.reg-form-ecom input[type="email"],
+.reg-form-ecom input[type="password"] {
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.reg-form-ecom input:focus {
+  border-color: #3b82f6;
+}
+
+/* Checkbox */
+.reg-checkbox-ecom {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.reg-checkbox-ecom input {
+  margin-right: 8px;
+}
+
+/* Button */
+.reg-submit-btn-ecom {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reg-submit-btn-ecom:hover {
+  background-color: #2563eb;
+}
+
+/* Footer */
+.login-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.color5 {
+  color: #6b7280;
+}
+
+.login-link a {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
