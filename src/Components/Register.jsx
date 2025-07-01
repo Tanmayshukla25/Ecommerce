@@ -3,8 +3,6 @@ import { ToastContainer, toast } from "react-toastify";
 import { auth } from "./Firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useNavigate, Link } from "react-router-dom";
-import styles from "./Register.module.css"; 
-import { storage } from "./Firebase";
 
 
 function Register() {
@@ -52,17 +50,17 @@ function Register() {
   }
 
   return (
-    <div className={styles.regContainer}>
+    <div className="register-wrapper">
       <ToastContainer />
-      <div className={styles.regCard}>
-        <div className={styles.regTab}>
-          <span className={styles.tabInactive}>Sign In</span>
-          <span className={styles.tabActive}>Register</span>
+      <div className="register-container">
+        <div className="register-tabs">
+          <span><Link to="/login">Sign In</Link></span>
+          <span>Register</span>
         </div>
 
-        <h2 className={styles.regTitle}>Create Your Account</h2>
+        <h2>Create Your Account</h2>
 
-        <form className={styles.regForm} onSubmit={handel}>
+        <form onSubmit={handel} className="register-form">
           <label htmlFor="name">Full Name</label>
           <input
             id="name"
@@ -103,22 +101,20 @@ function Register() {
             required
           />
 
-          <div className={styles.checkboxGroup}>
+          <div className="terms-container">
             <input type="checkbox" id="terms" required />
             <label htmlFor="terms">
               I agree to the <a href="#">Terms of Service</a>
             </label>
           </div>
 
-          <button type="submit" className={styles.submitBtn}>
+          <button type="submit" className="register-button">
             Sign Up
           </button>
         </form>
-        <p className={styles.loginFooter}>
-          Do you have an account?{" "}
-          <span className={styles.loginLink}>
-            <Link to={"/login"}>Log In</Link>
-          </span>
+
+        <p className="register-footer">
+          Already have an account? <Link to="/login">Log In</Link>
         </p>
       </div>
     </div>

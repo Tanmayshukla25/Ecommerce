@@ -1,7 +1,5 @@
 import { UserContext } from "./UserContext"
 import { useContext } from "react"
-import { IoHeart } from "react-icons/io5";
-import "./index.css";
 import { Link, useNavigate } from "react-router-dom";
 import { LuLogIn, LuLogOut } from "react-icons/lu";
 import { auth } from "./Firebase";
@@ -21,7 +19,8 @@ function Header() {
 
   return (
     <>
-      <div className='header'>
+      <div className="ParentDiv">
+        <div className='header'>
         <h1><Link to={"/"}>Ecommerce</Link></h1>
         <nav>
           <input
@@ -56,6 +55,7 @@ function Header() {
             </li>
           </ul>
         </nav>
+      </div>
       </div>
     </>
   );

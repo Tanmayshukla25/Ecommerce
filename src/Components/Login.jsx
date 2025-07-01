@@ -2,10 +2,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "./Firebase";
 import { ToastContainer, toast } from "react-toastify";
-import { useNavigate, useLocation, Link } from "react-router-dom";
-import styles from "./Register.module.css";
-import { useSearchParams } from "react-router-dom";
-
+import { useNavigate, useLocation, Link, useSearchParams } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -37,35 +34,32 @@ function Login() {
   };
 
   return (
-    <div className={styles.loginWrapper}>
+    <div className="Wrapper">
       <ToastContainer />
-      <div className={styles.loginCard}>
-        <h2 className={styles.loginTitle}>Welcome Back</h2>
-        <p className={styles.loginSubtitle}>Login to continue shopping</p>
-        <form onSubmit={handleLogin} className={styles.loginForm}>
+      <div>
+        <h2>Welcome Back</h2>
+        <p>Login to continue shopping</p>
+        <form onSubmit={handleLogin}>
           <input
             type="email"
             placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          />
+          /> <br />
+          
           <input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          />
-          <button type="submit" className={styles.loginButton}>
-            Login
-          </button>
+          /> <br />
+          <button type="submit">Login</button>
         </form>
-        <p className={styles.loginFooter}>
+        <p>
           Don’t have an account?{" "}
-          <Link to="/register" className={styles.loginLink}>
-            Register
-          </Link>
+          <Link to="/register">Register</Link>
         </p>
       </div>
     </div>

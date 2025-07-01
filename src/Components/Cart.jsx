@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { UserContext } from "./UserContext";
 import { useContext } from "react";
-import "./index.css";
+
 import { data } from "react-router-dom";
 // let ids=[]
 let result;
