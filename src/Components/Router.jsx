@@ -9,6 +9,7 @@ import Cart from "./Cart.jsx";
 import Login from "./Login.jsx";
 import Register from "./Register.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
+import PageNotFound from "../PageNotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "blog", element: <Blog /> },
+      { path: "/*", element: <PageNotFound /> },
       {
         path: "cart",
         element: (

@@ -1,10 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { PiCurrencyDollarBold } from "react-icons/pi";
-import { Link, useLinkClickHandler } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
-// import Header from './Header';
-// import "./Home.css"
+
 
 let data = [];
 let filterd;
@@ -15,7 +14,7 @@ function Home(e) {
 
   let { input } = useContext(UserContext);
   console.log(input);
-  // console.log(value)
+
   useEffect(() => {
     let result;
     async function fetchdata() {
@@ -45,7 +44,7 @@ function Home(e) {
   </div>
   </div>
 
-   ):(<div className="maindiv">
+   ):(<div className="maindiv" style={{marginTop:"8%"}}> 
         {input
           ? filterd.map((item) => {
             return ( <div className="div">

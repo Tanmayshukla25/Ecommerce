@@ -3,7 +3,7 @@
 function About() {
   return (
    
-    <div className="about">
+    <div className="about" style={{marginTop:"8%"}}>
        <h2>📦 Start Shopping Today!</h2>
        <p>Whether you're upgrading your wardrobe, hunting for the perfect gadget, or finding home essentials, we’re here to make it all possible—fast, simple, and safe.</p>
            <div>

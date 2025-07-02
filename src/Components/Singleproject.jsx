@@ -4,7 +4,8 @@ import { useContext, useEffect, useState } from "react";
 import { UserContext } from "./UserContext";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./Firebase";
-
+import { HiMiniShoppingCart } from "react-icons/hi2";
+import { FaHeart } from "react-icons/fa";
 function Singleproject() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -59,7 +60,7 @@ function handleAddCart() {
 
 
   return (
-    <div className="flex">
+    <div className="flex" style={{marginTop:"12%"}}>
       <div className="set">
         <img src={product.image} alt="" className="img" />
       </div>
@@ -69,14 +70,14 @@ function handleAddCart() {
         <h1>Price:-${product.price}</h1>
 
         <button className="btn1" onClick={handleAddCart} disabled={disabled}>
-          Add TO Cart
+        <span style={{display:"flex" , alignItems:"center" ,gap:"10px"}}> <span> <HiMiniShoppingCart size={20}  /></span> <span>Add TO Cart</span></span>
         </button>
 
         <button
           className="btn2"
       
         >
-          Wishlist
+          <span style={{display:"flex" , alignItems:"center" ,gap:"10px"}}> <span> <FaHeart size={20} /></span> <span>Wishlist</span></span>
         </button>
       </div>
     </div>

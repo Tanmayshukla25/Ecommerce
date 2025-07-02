@@ -50,7 +50,7 @@ function Register() {
   }
 
   return (
-    <div className="register-wrapper">
+    <div className="register-wrapper" style={{marginTop:"4%"}}>
       <ToastContainer />
       <div className="register-container">
         <div className="register-tabs">

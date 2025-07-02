@@ -79,7 +79,7 @@ function Cart() {
   }
 
   return (
-    <div>
+    <div style={{marginTop:"7%"}}>
       {products.map((item, index) => (
         <div key={item.id} className="cartflex">
           <div className="cartimg">
